@@ -1,19 +1,29 @@
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
-
-int main()
-{ 
-    int a,b;
-    float c,d;
-    scanf("%d %d %f %f",&a,&b,&c,&d);
-    int sum = a+b;
-    int diff = a-b;
-    float fsum = c+d;
-    float fdiff = c-d;
-    printf("%d %d\n%0.1f %0.1f",sum,diff,fsum,fdiff);
+/*
+Add `int max_of_four(int a, int b, int c, int d)` here.
+*/
+int max_of_four(int a,int b,int c,int d){
+    if (a>b && a>c && a>d){
+        return a;
+    }
+    else if (b>c&&b>d){
+        return b;
+    }
+    else if (c>d){
+        return c;
+    }
+    else{
+        return d;
+    }
     
+}
+    
+
+int main() {
+    int a, b, c, d;
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+    int ans = max_of_four(a, b, c, d);
+    printf("%d", ans);
     
     return 0;
 }
